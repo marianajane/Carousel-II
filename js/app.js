@@ -1,5 +1,29 @@
 var target = 0;
 
+$(document).ready(cargarPagina);
+	var $botones = $(".control");
+	var $anterior = $(".previous");
+	var $siguiente = $(".next");
+
+	$botones.click(cambiarImagen);
+	$anterior.click(anteriorImagen);
+	$siguiente.click(siguienteImagen);
+
+	$(botones).each(function(boton){
+		$botones.click(cambiarImagen);
+		$anterior.click(anteriorImagen);
+		$siguiente.click(siguienteImagen);
+	});
+		
+	var cambiarImagen = function () {
+	target = parseInt(this.dataset.target);
+	mostrarImagen(target);
+};
+
+
+/*
+var target = 0;
+
 var cargarPagina = function () {
 	// Elementos
 	var botones = document.querySelectorAll(".control");
@@ -40,6 +64,5 @@ var siguienteImagen = function (e) {
 	mostrarImagen(target);mostrarImagen(target);
 };
 
-
-
 window.addEventListener("load", cargarPagina);
+*/
