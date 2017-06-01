@@ -1,27 +1,48 @@
-var target = 0;
+var $target= 0 ;
 
-$(document).ready(cargarPagina);
+var cargarPagina = function(){
 	var $botones = $(".control");
 	var $anterior = $(".previous");
 	var $siguiente = $(".next");
-
-	$botones.click(cambiarImagen);
+	// Funciones que asignamos el evento click (funciones anonimas)
+	$botones.click(cambiaImagen);
 	$anterior.click(anteriorImagen);
 	$siguiente.click(siguienteImagen);
 
-	$(botones).each(function(boton){
-		$botones.click(cambiarImagen);
-		$anterior.click(anteriorImagen);
-		$siguiente.click(siguienteImagen);
-	});
-		
-	var cambiarImagen = function () {
-	target = parseInt(this.dataset.target);
+}
+var cambiaImagen= function(){
+	//->target = this.currentTarget
+	target= parseInt($(this).data("target"));
 	mostrarImagen(target);
 };
 
+var mostrarImagen = function (target) {
+	var lastSlide = document.querySelector("div.active");
+	var slide = document.querySelector("div[data-slide='" + target + "']");
+	lastSlide.classList.remove("active");
+	slide.classList.add("active");
+};
+
+var anteriorImagen = function (e) {
+	e.preventDefault();
+	target = target - 1;
+	target = (target < 0) ? 3 : target;
+	mostrarImagen(target);
+};
+
+var siguienteImagen = function (e) {
+	e.preventDefault();
+	target = target + 1;
+	target = (target > 3) ? 0 : target;
+	mostrarImagen(target);mostrarImagen(target);
+};
+
+window.addEventListener("load", cargarPagina);
+
 
 /*
+Con JavaScript
+
 var target = 0;
 
 var cargarPagina = function () {

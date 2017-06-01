@@ -3,31 +3,34 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Carousel con JS</title>
-	<link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
+	<h1 class="">Carousel V2 con jQuery</h1>
 	<div class="carousel">
 		<div data-slide="0" class="carousel-content active">
-			<img src="" alt="Imagen 1">
+			<img src="img/AHS-Opening.jpg" alt="AHS 1">
 		</div>
-		<div data-slide="1" class="carousel-content ">
-			<img src="" alt="Imagen 2">
+		<div data-slide="1" class="carousel-content">
+			<img src="img/ahs-coven.jpg" alt="AHS 2">
 		</div>
-		<div data-slide="2" class="carousel-content ">
-			<img src="" alt="Imagen 3">
+		<div data-slide="2" class="carousel-content">
+			<img src="img/gurls.jpg" alt="AHS 3">
 		</div>
 		<div data-slide="3" class="carousel-content">
-			<img src="" alt="Imagen 4">
+			<img src="img/sarah_paulson.jpg" alt="AHS 4">
 		</div>
 	</div>
 	<div class="controls">
 		<a href="#" class="previous">&#60;</a>
-		<button type="button" data-target="0" class="control"></button>
-		<button type="button" data-target="1" class="control"></button>
-		<button type="button" data-target="2" class="control"></button>
-		<button type="button" data-target="3" class="control"></button>
+		<button type="button" data-target="0" class="control btn"></button>
+		<button type="button" data-target="1" class="control btn"></button>
+		<button type="button" data-target="2" class="control btn"></button>
+		<button type="button" data-target="3" class="control btn"></button>
 		<a href="#" class="next">&#62;</a>
 	</div>
-	<script src="./js/app.js"></script>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/app.js"></script>
 </body>
 </html>
