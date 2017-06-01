@@ -14,9 +14,13 @@ body{
 }
 
 .carousel>div>img {
-	width: 100%;
+	width: 5s0%;
 }
 .imagenes{
 	width: 659px;
 	height: 370px ;
+	z-index: -1;
+}
+.flechas{
+	z-index: 1;
 }

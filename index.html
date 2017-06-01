@@ -5,10 +5,11 @@
 	<title>Carousel con JS</title>
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
 	<div class="row">
-		<div class="col-md-6 col-md-offset-3">
+		<div class="col-md-12">
 			<h1 class="text-center">Carousel V2 con jQuery</h1>
 				<div class="carousel">
 					<div data-slide="0" class="carousel-content active">
@@ -25,17 +26,25 @@
 					</div>
 				</div>
 				<div class="controls">
-					<a href="#" class="previous">&#60;</a>
-					<button type="button" data-target="0" class="control btn"></button>
+				<a class="left carousel-control next flechas" href="#carousel-example-generic" role="button" data-slide="prev">
+	              <span class="glyphicon glyphicon-chevron-left previous" aria-hidden="true"></span>
+	              <span class="sr-only">Previous</span>
+	            </a>
+		            <button type="button" data-target="0" class="control btn"></button>
 					<button type="button" data-target="1" class="control btn"></button>
 					<button type="button" data-target="2" class="control btn"></button>
 					<button type="button" data-target="3" class="control btn"></button>
-					<a href="#" class="next">&#62;</a>
+	            <a class="right carousel-control next flechas" href="#carousel-example-generic" role="button" data-slide="next">
+	                <span class="glyphicon glyphicon-chevron-right next" aria-hidden="true"></span>
+	                <span class="sr-only">Next</span>
+	            </a>
 				</div>
 		</div>
 	</div>
 	
-	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<!-- <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous">
+    </script> -->
+    <script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/app.js"></script>
 </body>
 </html>
